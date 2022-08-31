@@ -1,6 +1,4 @@
 // PhotoSwipe
-initPhotoSwipeFromDOM(".js-my-gallery");
-
 $(function () {
   
 window.scroll({
