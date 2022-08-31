@@ -1,6 +1,27 @@
-// PhotoSwipe
 $(function () {
-  
+
+$(".works-url").on("click", "a", function (e) {
+    e.stopPropagation();
+  });
+
+  //Scroll
+  var $nav = $(".gnav");
+  var navHeight = $nav.outerHeight();
+
+  $('a[href^="#"]').on("click", function () {
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? "html" : href);
+    var position = target.offset().top - navHeight;
+    $("html, body").animate(
+      {
+        scrollTop: position,
+      },
+      300,
+      "swing"
+    );
+    return false;
+  });
+
 window.scroll({
   top: 2500, 
   left: 0, 
